@@ -40,11 +40,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans            &trans      &trans  &trans                               &trans           &trans        &trans              &trans               &trans         &trans
-&trans  &trans  &kp LS(NUMBER_2)  &kp LS(N3)  &trans  &kp LS(N5)                           &kp LS(LC(TAB))  &kp LG(LBKT)  &kp LA(TAB)         &kp LG(RBKT)         &kp LC(TAB)    &trans
-&trans  &trans  &kp N2            &kp N3      &kp N4  &kp N5      &trans  &trans           &kp LEFT_BRACE   &mkp MB1      &mkp MB3            &mkp MB2             &kp PAGE_UP    &trans
-&trans  &trans  &trans            &trans      &trans  &trans      &trans  &trans           &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
-&trans  &trans  &trans            &trans      &trans  &trans      &trans  &kp LS(LA(TAB))  &trans           &trans        &trans              &trans               &trans         &trans
+&trans  &trans  &trans          &trans        &trans      &trans                                  &trans           &trans        &trans              &trans               &trans         &trans
+&trans  &trans  &kp SCROLLLOCK  &kp C_PAUSE   &trans      &kp PAGE_UP                             &kp LS(LC(TAB))  &kp LG(LBKT)  &kp LA(TAB)         &kp LG(RBKT)         &kp LC(TAB)    &trans
+&trans  &trans  &kp C_VOL_DN    &kp C_VOL_UP  &kp K_MUTE  &kp PAGE_DOWN  &trans  &trans           &kp LEFT_BRACE   &mkp MB1      &mkp MB3            &mkp MB2             &kp PAGE_UP    &trans
+&trans  &trans  &trans          &trans        &trans      &trans         &trans  &trans           &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
+&trans  &trans  &trans          &trans        &trans      &trans         &trans  &kp LS(LA(TAB))  &trans           &trans        &trans              &trans               &trans         &trans
             >;
         };
 
