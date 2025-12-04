@@ -5,12 +5,13 @@
 
 / {
     /* behaviors を追加 */
+    /* https://zmk.dev/docs/keymaps/behaviors/hold-tap?examples=mlt#custom-hold-tap-examples */
     behaviors {
-        &mt {
+        mt: mod_tap {
             flavor = "balanced";
             tapping-term-ms = <200>;
         };
-        &lt {
+        lt: layer_tap {
             flavor = "balanced";
             tapping-term-ms = <200>;
         };
