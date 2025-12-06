@@ -4,9 +4,11 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
+#define MOUSE 2
+
 &mkp_input_listener {
     /* マウスボタン入力で5秒間layer 2に移行 */
-    input-processors = <&zip_temp_layer 2 1000>;
+    input-processors = <&zip_temp_layer MOUSE 1000>;
 };
 
 / {
