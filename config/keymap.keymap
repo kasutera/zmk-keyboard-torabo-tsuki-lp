@@ -19,6 +19,28 @@
         };
     };
 
+    /* exit_AML, kp_exit_AML, tog_off, mt_exit_AML_on_tap: Shift + クリック, Cmd + クリック などで AML を維持するためのマクロ & コンボ */
+    /* https://zenn.dev/kot149/articles/zmk-auto-mouse-layer#shift%2B%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%AE%E5%8B%95%E4%BD%9C%E6%94%B9%E5%96%84 */
+    macros {
+        exit_AML: exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off MOUSE>;
+            label = "exit_AML";
+        };
+
+        kp_exit_AML: kp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+            label = "KP_exit_AML";
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -26,6 +48,24 @@
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
             layers = <2>;
+        };
+
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_exit_AML_ON_TAP";
+            bindings = <&kp>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
         };
     };
 
@@ -36,9 +76,9 @@
             bindings = <
 &trans  &trans            &trans     &trans           &trans        &trans                                      &trans       &trans  &trans     &trans    &trans                &trans
 &trans  &kp Q             &kp W      &kp E            &kp R         &kp T                                       &kp Y        &kp U   &kp I      &kp O     &kp P                 &trans
-&trans  &mt LCTRL A       &kp S      &mt LGUI D       &lt 2 F       &kp G           &trans     &trans           &kp H        &kp J   &kp K      &kp L     &kp COLON             &trans
+&trans  &mt_exit_AML_on_tap LCTRL A       &kp S      &mt LGUI D       &lt 2 F       &kp G           &trans     &trans           &kp H        &kp J   &kp K      &kp L     &kp COLON             &trans
 &trans  &mt LEFT_SHIFT Z  &kp X      &kp C            &kp V         &kp B           &kp SPACE  &lt 4 BACKSPACE  &kp N        &kp M   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &trans
-&trans  &mt LALT LANG2    &kp LCTRL  &mt LCTRL MINUS  &lt 2 ESCAPE  &mt LGUI SPACE  &kp TAB    &lt 3 BACKSPACE  &lt 1 ENTER  &trans  &trans     &kp RGUI  &mt RSHIFT LANG1      &trans
+&trans  &mt_exit_AML_on_tap LALT LANG2    &kp LCTRL  &mt LCTRL MINUS  &lt 2 ESCAPE  &mt_exit_AML_on_tap LGUI SPACE  &kp TAB    &lt 3 BACKSPACE  &lt 1 ENTER  &trans  &trans     &kp RGUI  &mt RSHIFT LANG1      &trans
             >;
         };
 
