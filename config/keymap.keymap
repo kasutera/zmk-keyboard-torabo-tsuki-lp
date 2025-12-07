@@ -93,6 +93,6 @@
 &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5          &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
 &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &kp LS(LA(TAB)) &trans           &trans        &trans              &trans               &tog 5         &trans
             >;
-        }
+        };
     };
 };
