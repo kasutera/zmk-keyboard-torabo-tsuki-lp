@@ -38,7 +38,7 @@
 &trans  &trans            &trans     &trans           &trans        &trans                                      &trans      &trans  &trans     &trans    &trans                &trans
 &trans  &kp Q             &kp W      &kp E            &kp R         &kp T                                       &kp Y       &kp U   &kp I      &kp O     &kp P                 &trans
 &trans  &mt LCTRL A       &kp S      &mt LGUI D       &lt 2 F       &kp G           &trans      &trans          &kp H       &kp J   &kp K      &kp L     &kp COLON             &trans
-&trans  &mt LEFT_SHIFT Z  &kp X      &kp C            &kp V         &kp B           &lt 4 SPACE &to 2           &kp N       &kp M   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &trans
+&trans  &mt LEFT_SHIFT Z  &kp X      &kp C            &kp V         &kp B           &lt 4 SPACE &tog 2          &kp N       &kp M   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &trans
 &trans  &mt LALT LANG2    &kp LCTRL  &mt LCTRL MINUS  &lt 2 ESCAPE  &mt LGUI SPACE  &kp TAB     &lt 3 BACKSPACE &lt 1 ENTER &trans  &trans     &kp RGUI  &mt RSHIFT LANG1      &trans
             >;
         };
@@ -82,5 +82,15 @@
 &none  &none        &none        &none        &none        &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
         };
+
+        layer_5 {
+            /* 右手マウスレイヤー用 layer_2 の片手版 */
+            /* &tog 5 を押すと元のレイヤーに戻る */
+&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5                          &trans           &trans        &trans              &trans               &trans         &trans
+&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5                          &kp LS(LC(TAB))  &kp LG(LBKT)  &kp LA(TAB)         &kp LG(RBKT)         &kp LC(TAB)    &trans
+&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &trans          &kp BACKSPACE    &mkp MB1      &mkp MB3            &mkp MB2             &kp PAGE_UP    &trans
+&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5          &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
+&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &kp LS(LA(TAB)) &trans           &trans        &trans              &trans               &tog 5         &trans
+        }
     };
 };
