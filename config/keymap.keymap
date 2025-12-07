@@ -86,11 +86,13 @@
         layer_5 {
             /* 右手マウスレイヤー用 layer_2 の片手版 */
             /* &tog 5 を押すと元のレイヤーに戻る */
+            bindings = <
 &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5                          &trans           &trans        &trans              &trans               &trans         &trans
 &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5                          &kp LS(LC(TAB))  &kp LG(LBKT)  &kp LA(TAB)         &kp LG(RBKT)         &kp LC(TAB)    &trans
 &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &trans          &kp BACKSPACE    &mkp MB1      &mkp MB3            &mkp MB2             &kp PAGE_UP    &trans
 &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5          &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
 &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &kp LS(LA(TAB)) &trans           &trans        &trans              &trans               &tog 5         &trans
+            >;
         }
     };
 };
