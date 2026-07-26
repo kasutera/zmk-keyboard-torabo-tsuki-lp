@@ -20,6 +20,20 @@
         };
     };
 
+    macros {
+        layer_5_enter: layer_5_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &tog 5 &kp F13>;
+        };
+
+        layer_5_exit: layer_5_exit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &tog 5 &kp F14>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -28,7 +42,7 @@
 &trans  &trans            &trans     &trans           &trans        &trans                                      &trans      &trans  &trans     &trans    &trans                &trans
 &trans  &kp Q             &kp W      &kp E            &kp R         &kp T                                       &kp Y       &kp U   &kp I      &kp O     &kp P                 &trans
 &trans  &mt LCTRL A       &kp S      &mt LGUI D       &lt 2 F       &kp G           &trans      &trans          &kp H       &kp J   &kp K      &kp L     &kp COLON             &trans
-&trans  &mt LEFT_SHIFT Z  &kp X      &kp C            &kp V         &kp B           &lt 4 SPACE &tog 5          &kp N       &kp M   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &trans
+&trans  &mt LEFT_SHIFT Z  &kp X      &kp C            &kp V         &kp B           &lt 4 SPACE &layer_5_enter  &kp N       &kp M   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &trans
 &trans  &mt LALT LANG2    &kp LCTRL  &mt LCTRL MINUS  &lt 2 ESCAPE  &mt LGUI SPACE  &kp TAB     &lt 3 BACKSPACE &lt 1 ENTER &trans  &trans     &kp RGUI  &mt RSHIFT LANG1      &trans
             >;
         };
@@ -75,13 +89,13 @@
 
         layer_5 {
             /* 右手マウスレイヤー用 layer_2 の片手版 */
-            /* &tog 5 を押すと元のレイヤーに戻る */
+            /* &layer_5_exit を押すと元のレイヤーに戻る */
             bindings = <
-&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5                          &trans           &trans        &trans              &trans               &trans         &trans
-&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5                          &kp LS(LC(TAB))  &kp LG(LBKT)  &kp LA(TAB)         &kp LG(RBKT)         &kp LC(TAB)    &trans
-&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &trans          &kp BACKSPACE    &mkp MB1      &mkp MB3            &mkp MB2             &kp PAGE_UP    &trans
-&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5          &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
-&tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &tog 5  &kp LS(LA(TAB)) &trans           &trans        &trans              &trans               &tog 5         &trans
+&layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit                          &trans           &trans        &trans              &trans               &trans         &trans
+&layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit                          &kp LS(LC(TAB))  &kp LG(LBKT)  &kp LA(TAB)         &kp LG(RBKT)         &kp LC(TAB)    &trans
+&layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &trans          &kp BACKSPACE    &mkp MB1      &mkp MB3            &mkp MB2             &kp PAGE_UP    &trans
+&layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit          &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
+&layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &kp LS(LA(TAB)) &trans           &trans        &trans              &trans               &layer_5_exit         &trans
             >;
         };
     };
