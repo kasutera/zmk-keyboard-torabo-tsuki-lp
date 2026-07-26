@@ -24,13 +24,13 @@
         layer_5_enter: layer_5_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &tog 5 &kp F13>;
+            bindings = <&macro_tap &tog 5 &kp F16>;
         };
 
         layer_5_exit: layer_5_exit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &tog 5 &kp F14>;
+            bindings = <&macro_tap &tog 5 &kp F17>;
         };
     };
 
