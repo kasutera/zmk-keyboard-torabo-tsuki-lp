@@ -13,7 +13,7 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
     with:
-      archive_name: firmware-${{ github.run_id }}
+      archive_name: firmware-${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || github.run_id }}
     secrets: inherit
 
   release:
