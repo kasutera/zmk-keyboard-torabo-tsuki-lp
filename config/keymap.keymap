@@ -61,7 +61,7 @@
             bindings = <
 &trans  &trans  &trans         &trans        &trans      &trans                                  &trans           &trans        &trans              &trans               &trans         &trans
 &trans  &trans  &kp C_BRI_DEC  &kp C_BRI_UP  &trans      &kp PAGE_UP                             &kp LS(LC(TAB))  &kp LG(LBKT)  &kp LA(TAB)         &kp LG(RBKT)         &kp LC(TAB)    &trans
-&trans  &trans  &kp C_VOL_DN   &kp C_VOL_UP  &kp K_MUTE  &kp PAGE_DOWN  &trans  &trans           &kp BACKSPACE    &mkp MB1      &mkp MB3            &kp LC(UP_ARROW)     &kp PAGE_UP    &trans
+&trans  &trans  &kp C_VOL_DN   &kp C_VOL_UP  &kp K_MUTE  &kp PAGE_DOWN  &trans  &trans           &kp BACKSPACE    &mkp MB1      &kp LC(UP_ARROW)     &mkp MB2             &kp PAGE_UP    &trans
 &trans  &trans  &trans         &trans        &trans      &trans         &trans  &trans           &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans         &trans        &trans      &trans         &trans  &kp LS(LA(TAB))  &trans           &trans        &trans              &trans               &trans         &trans
             >;
@@ -93,7 +93,7 @@
             bindings = <
 &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit                          &trans           &trans        &trans              &trans               &trans         &trans
 &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit                          &kp LS(LC(TAB))  &kp LG(LBKT)  &kp LA(TAB)         &kp LG(RBKT)         &kp LC(TAB)    &trans
-&layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &trans          &kp BACKSPACE    &mkp MB1      &mkp MB3            &kp LC(UP_ARROW)     &kp PAGE_UP    &trans
+&layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &trans          &kp BACKSPACE    &mkp MB1      &kp LC(UP_ARROW)     &mkp MB2             &kp PAGE_UP    &trans
 &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit          &kp DEL          &kp ENTER     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PAGE_DOWN  &trans
 &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &layer_5_exit  &kp LS(LA(TAB)) &trans           &trans        &trans              &trans               &layer_5_exit         &trans
             >;
